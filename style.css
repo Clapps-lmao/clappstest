@@ -1,0 +1,147 @@
+@import url('https://fonts.cdnfonts.com/css/ts-block');
+
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+}
+body::selection {
+    color: red;
+}
+.image-rb-lights-plain {
+    position: absolute;
+    pointer-events: none;
+    width: 99%;
+    height: 98%;
+    aspect-ratio: 2;
+}
+.image-rb-lights-plain::selection {
+    color: red;
+}
+
+.image-rb-lights {
+    position: absolute;
+    filter: blur(60px);
+    pointer-events: none;
+    width: 99.2%;
+    height: 98%;
+    aspect-ratio: 2;
+}
+.image-rb-lights::selection {
+    color: red;
+}
+.Clapps-text-heading {
+    position: absolute;
+    font-family: "TS Block Bold";
+    font-size: 5vh;
+    display: flex;
+    color: white;
+}
+.Clapps-text-heading::selection {
+    color: red;
+}
+.main-buttons {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 10%;
+    min-width: 35%;
+    margin-top: 20%;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Bahnschrift;
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 10em;
+    height: 1.5em;
+    text-decoration: none;
+    color: mintcream;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.button::selection{
+    color: red;
+}
+
+.modal-twitch-example {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.71); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    animation: ease-in 350ms;
+    background-color: rgba(0, 0, 0, 0.16);
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #494949;
+    width: 50%;
+    height: 50%;
+    animation-name: animatetop;
+    animation-duration: 250ms
+}
+.close {
+    color: #6b6b6b;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus{
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.close::selection {
+    color: red;
+}
+.inner-modal-text-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.modal-text {
+    font-size: 20px;
+    padding-top: 20px;
+    font-family: "Calibri Light";
+    color: mintcream;
+    text-align: center;
+}
+.modal-text::selection {
+    color: red;
+}
+
+.inner-game-rotation-div {
+        margin-top: 10%;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}

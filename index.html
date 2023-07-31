@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link href="https://fonts.cdnfonts.com/css/ts-block" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Clapps.</title>
+
+    <script>
+        // First, specify your API key.
+        const pdKey = 'f43037a37ed7cff42c45';
+        // Optionally, you can specify any custom value. This value could for example identify
+        // the session of your user. The same value is provided in the API callback.
+        // With this value, you can make any kind of action depending on whether a Proxy or VPN was detected.
+        const pdVal = '12345';
+        // Now the JavaScript integration URL is created and the JS is loaded dynamically
+        const fullUrl = 'https://pd-us-east.incolumitas.com/pd-lib.js?pdKey=' + pdKey + '&pdVal=' + pdVal;
+        let pdsScript = document.createElement("script");
+        pdsScript.setAttribute("src", fullUrl);
+        document.head.appendChild(pdsScript);
+    </script>
+    <script src="https://pd-us-east.incolumitas.com/pd-lib.js?pdKey=f43037a37ed7cff42c45&pdVal=12345"></script>
+    <script src="detection.js"></script>
+</head>
+<body>
+<div class="image-rb-lights">
+<img class="image-rb-lights-plain" src="https://images.pond5.com/animation-police-lights-red-blue-footage-121988821_iconl.jpeg">
+</div>
+
+<h4 class="Clapps-text-heading">Clapps.</h4>
+
+<div class="main-buttons">
+    <a class="button" href="https://discord.gg/xCsSP8rVnS" target="_blank" >My Roblox Game</a>
+    <a id="twitch-button" class="button" style="cursor: pointer;">Twitch</a>
+    <a id="About-Me-button" class="button" style="cursor: pointer">About Me</a>
+    <a id="game-rotation-button" class="button" style="cursor: pointer">Games I Play</a>
+</div>
+
+<div id="Twitch-Modal" class="modal-twitch-example">
+<div id="inner-twitch-modal" class="modal-content">
+    <span id="close" class="close">&times;</span>
+    <iframe src="https://player.twitch.tv/?channel=not_clapps&parent=www.clapps.lol" frameborder="0" allowfullscreen="false" height="95%" width="100%"></iframe>
+</div>
+</div>
+
+
+<div id="About-Me-Modal" class="modal-twitch-example">
+    <div id="inner-aboutme-modal" class="modal-content">
+        <span id="close1-btn" class="close">&times;</span>
+        <div class="inner-modal-text-content">
+            <p class="modal-text">Hi there, I'm DJ, a 14 year old who enjoys traveling, photography, and gaming. I've had the opportunity to visit countries like Germany, Switzerland, Paris, and Austria. I also live in Arizona, where the diverse landscapes offer unique inspiration for my hobbies. Whether I'm exploring new places, capturing moments with my camera, or immersing myself in gaming adventures, these activities keep me engaged during my free time. I also have a keen interest in music, and my favorite artists include Juice WRLD, Kanye West, Metro Boomin, Drake, and The Weeknd. Their unique styles and captivating beats have a special place in my playlist, and I often find myself immersed in their songs during my leisure time. Whether it's Juice WRLD's heartfelt lyrics, Kanye's boundary-pushing creativity, Metro Boomin's exceptional production, Drake's versatile flows, or The Weeknd's soulful melodies, their music never fails to resonate with me.</p>
+        </div>
+    </div>
+</div>
+
+<div id="game-rotation-Modal" class="modal-twitch-example">
+    <div id="inner-rotation-modal" class="modal-content">
+            <span id="close2-btn" class="close">&times;</span>
+        <div class="inner-game-rotation-div">
+            <li class="modal-text">Tom Clancy's: Rainbow Six Siege</li>
+            <li class="modal-text">Fortnite: Battle Royale</li>
+            <li class="modal-text">Rust</li>
+            <li class="modal-text">Ready Or Not</li>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<script>
+    var modal = document.getElementById("Twitch-Modal");
+    var btn = document.getElementById("twitch-button");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+<script>
+    var modal1 = document.getElementById("About-Me-Modal");
+    var btn1 = document.getElementById("About-Me-button");
+    var span1 = document.getElementById("close1-btn");
+    btn1.onclick = function() {
+        modal1.style.display = "block";
+    }
+    span1.onclick = function() {
+        modal1.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal1) {
+            modal1.style.display = "none";
+        }
+    }
+</script>
+
+<script>
+    var modal2 = document.getElementById("game-rotation-Modal");
+    var btn2 = document.getElementById("game-rotation-button");
+    var span2 = document.getElementById("close2-btn");
+    btn2.onclick = function() {
+        modal2.style.display = "block";
+    }
+    span2.onclick = function() {
+        modal2.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+    }
+</script>
+
+
+</html>
